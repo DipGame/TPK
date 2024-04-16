@@ -1,0 +1,148 @@
+.banerSwiper1 {
+    width: 100%;
+    height: 770px;
+
+    .swiper-wrapper {
+        height: 100%;
+        background-color: grey;
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper-slide {
+        display: flex;
+        width: 100%;
+        // height: 100%;
+        position: relative;
+        // align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        background-position: center;
+        background-size: cover;
+
+        h2 {
+            font-family: Geologica;
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 83.2px;
+            text-align: center;
+            max-width: 892px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-family: Geologica;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28.8px;
+            text-align: center;
+            color: #FFF;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+
+    .swiper-slide-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* Нужное для вас */
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .swiper-pagination-bullet-custom {
+        display: flex;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-family: Geologica;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        color: #FFF;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+    }
+
+    .swiper-pagination-bullet-custom:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .swiper-pagination-bullet-custom svg {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg) scale(1.15);
+    }
+
+    .swiper-pagination-bullet-custom--active svg {
+        display: block;
+    }
+
+    .swiper-pagination-bullet-custom--active svg circle {
+        stroke-dasharray: 56.5563;
+        stroke-dashoffset: 56.5563;
+        animation: BulletProgress calc(var(--delay) * 1ms) linear forwards;
+    }
+
+    .swiper-pagination-bullet-custom--active::before {
+        background-color: #fff;
+    }
+
+    @keyframes BulletProgress {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .swiper--pause .swiper-pagination-bullet-custom--active svg circle {
+        animation: none;
+    }
+
+    @media (max-width: 648px) {
+        height: 480px;
+
+        .swiper-slide {
+            h2 {
+                margin-bottom: 15px;
+                font-family: Geologica;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 46.8px;
+                text-align: center;
+            }
+
+            p {
+                margin-bottom: 40px;
+                font-family: Geologica;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 21.6px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.podhod {
+    background-color: #1E2D44;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+
+    .podhod__cont {
+        padding: 65px 0;
+        width: 100%;
+        max-width: 1290px;
+        margin: 0 auto;
+
+        h2 {
+            font-family: Geologica;
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 83.2px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .cont_1 {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+
+            .cont_1_1 {
+                width: 100%;
+                max-width: 50%;
+                padding: 100px 50px 50px;
+                display: flex;
+                flex-direction: column;
+                min-height: 410px;
+                background-position: 100% 100%;
+                background-size: cover;
+
+                h3 {
+                    font-family: Geologica;
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 45px;
+                    text-align: left;
+                    margin-bottom: 15px;
+                    max-width: 425px;
+                }
+
+                p {
+                    font-family: Geologica;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    max-width: 425px;
+                }
+
+                .button_2 {
+                    margin-top: auto;
+                }
+            }
+
+            @media (max-width: 1250px) {
+                flex-direction: column;
+
+                .cont_1_1 {
+                    max-width: none;
+                }
+            }
+        }
+
+        .cont_2 {
+            margin: 0;
+            background-color: #A1ABB1;
+
+            .cont_1_1 {
+                max-width: none;
+                background-image: var(--cont_2_back_1);
+
+                .img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1052px) {
+    .podhod .podhod__cont h2 {
+        font-family: Geologica;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 46.8px;
+        text-align: left;
+    }
+
+    .podhod .podhod__cont .cont_1 .cont_1_1 h3 {
+        font-family: Geologica;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        max-width: 225px;
+    }
+
+    .podhod .podhod__cont .cont_1 .cont_1_1 p {
+        font-family: Geologica;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        max-width: 220px;
+    }
+
+    .podhod .podhod__cont .cont_1 .cont_1_1 {
+        min-height: 220px;
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 590px) {
+    .podhod .podhod__cont .cont_2 .cont_1_1 {
+        // background-image: var(--cont_2_back_1_mob);
+        background: none;
+        min-height: 470px;
+        position: relative;
+
+        .img {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 225px;
+            width: 100%;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        
+    }
+
+    .podhod .podhod__cont .cont_1 .cont_1_1 p {
+        margin-bottom: 15px;
+    }
+
+    .podhod .podhod__cont .cont_1 .cont_1_1 .button_2 {
+        margin-top: 0;
+    }
+}

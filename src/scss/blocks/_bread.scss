@@ -1,0 +1,20 @@
+.bread {
+    display: flex;
+    gap: 10px 15px;
+    flex-wrap: wrap;
+    padding: 28px 20px;
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+
+    li,
+    a,
+    p {
+        font-family: Geologica;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+        color: #1F1F1F;
+    }
+}
