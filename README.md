@@ -1,1 +1,1 @@
-# TPK
+[# TPK](https://dipgame.github.io/TPK/)
